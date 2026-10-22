@@ -1,0 +1,19 @@
+{
+  "name": "dvary-web",
+  "version": "1.0.0",
+  "description": "Dvary Bot pairing website (hosted on Render). It stores NO WhatsApp sessions - it only asks the bot server (Pterodactyl) for a pairing code.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^4.21.1",
+    "express-rate-limit": "^7.4.1",
+    "helmet": "^8.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "license": "MIT"
+}

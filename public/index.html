@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="sw">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dvary Bot - Pair WhatsApp</title>
+  <meta name="description" content="Unganisha namba yako ya WhatsApp na Dvary Bot kwa pairing code.">
+  <meta name="theme-color" content="#0b1411">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header class="top">
+      <div class="logo" aria-hidden="true">D</div>
+      <div>
+        <h1>Dvary Bot</h1>
+        <p class="sub">Unganisha WhatsApp yako &middot; Link your WhatsApp</p>
+      </div>
+    </header>
+
+    <section class="card" id="formCard">
+      <form id="pairForm" novalidate>
+        <label for="phone">Namba yako ya WhatsApp <span class="en">/ Your WhatsApp number</span></label>
+        <input id="phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel"
+               placeholder="255712345678" maxlength="20" required>
+        <p class="hint">Weka code ya nchi, bila <b>+</b> wala nafasi. Mfano: <b>255712345678</b></p>
+        <button type="submit" id="go" class="btn primary">Pata Pair Code</button>
+        <p class="error" id="error" role="alert" hidden></p>
+      </form>
+    </section>
+
+    <section class="card" id="codeCard" hidden aria-live="polite">
+      <p class="label">Pair code yako <span class="en">/ Your pair code</span></p>
+      <div class="code" id="code">----</div>
+      <div class="row">
+        <button type="button" id="copy" class="btn primary">📋 Copy Code</button>
+        <span class="timer" id="timer"></span>
+      </div>
+
+      <ol class="steps">
+        <li>Fungua <b>WhatsApp</b> kwenye simu yenye namba hii.</li>
+        <li><b>Settings</b> &rarr; <b>Linked devices</b> &rarr; <b>Link a device</b>.</li>
+        <li>Gusa <b>Link with phone number instead</b>.</li>
+        <li>Bandika code hapo juu (Paste).</li>
+      </ol>
+
+      <p class="status" id="status">⏳ Inasubiri uingize code kwenye WhatsApp...</p>
+      <button type="button" id="again" class="btn ghost" hidden>Omba code mpya</button>
+    </section>
+
+    <section class="links">
+      <a class="btn link" href="https://whatsapp.com/channel/0029VbCRC9b5fM5cruU8PF2M" target="_blank" rel="noopener">📢 View Channel</a>
+      <a class="btn link" href="https://chat.whatsapp.com/GhigFoMJ1hY1B1HGtBl3kz?s=sh&amp;p=a&amp;mlu=4&amp;ilr=4" target="_blank" rel="noopener">👥 View Group</a>
+    </section>
+
+    <footer class="foot">Sessions zako zinahifadhiwa kwenye server ya bot, si kwenye website hii.</footer>
+  </main>
+  <script src="/app.js" defer></script>
+</body>
+</html>

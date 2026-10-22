@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: dvary-web
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      # the address of your bot on Pterodactyl, e.g. http://node.dvary.space:8081
+      - key: BOT_API_URL
+        sync: false
+      # the SAME secret you put on the bot server (16+ characters)
+      - key: REMOTE_API_SECRET
+        sync: false
